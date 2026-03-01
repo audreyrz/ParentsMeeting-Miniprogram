@@ -1,1 +1,0 @@
-"D:\Program Files\Tencent\΢��web�����߹���\cli.bat" cloud functions deploy --e hmzx-9gyzn96haa235cf8 --n quickstartFunctions --r --project "E:\�ҵ�\code\hmzx" --report_first --report
