@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="model model_show">
+    <image src="../../images/main_s.png"></image>
+    <view class="main_title">家长会预约</view>
+    <view class="main_entil">REGISTRATION</view>
+    <form bindsubmit="formSubmit" class="form">
+      <view class="form_item">
+        <view>学生姓名 Full Name</view>
+        <input name="studentName" placeholder="学生姓名.FullName(example:LiHua)" placeholder-class="place" value="{{form.studentName}}" />
+      </view>
+      <view class="form_item">
+        <view>学生学号 G-Number</view>
+        <input name="studentId" placeholder="请填写学生学号G-Number" placeholder-class="place" value="{{form.studentId}}"/>
+      </view>
+      <button formType="submit">登录Login</button>
+    </form>
+    <view bindtap="teacherRedirect" class="teacher">点击老师登陆 Login teacher's account</view>
+    <view bindtap="adminRedirect" class="admin_super">超级管理员登陆</view>
+  </view>
+</view>
