@@ -1,0 +1,4 @@
+<!--pages/admin_super/index.wxml-->
+<text>pages/admin_super/index.wxml</text>
+<view>test</view>
+<view>{{data.msg}}</view>

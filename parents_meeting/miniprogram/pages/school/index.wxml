@@ -1,0 +1,32 @@
+<view class="container">
+  <image class="background-img" src="../../images/main_s.png"></image>
+  <view class="header">
+    <image class="avatar" src="../../images/school_logo1.png"></image>
+    <view class="info">
+      <view class="name">{{ userInfo.studentName}}{{userInfo.grade?'  ('+userInfo.grade+'年级'+userInfo.class+'班)':''}}</view>
+      <view class="student-id">{{ userInfo.studentId}}</view>
+    </view>
+  </view>
+  <view class="board">
+    <view> 公告栏 </view>
+    <view wx:for="{{ notification }}" wx:key="id">
+      <view>{{ item.title }}: {{ item.value }}</view>
+    </view>
+  </view>
+  <view class="board" style="height: 200px;">
+    <view style = "height: 200px; overflow: scroll;">
+      <view>当日预约</view>     
+      <view wx:if="{{notParticipating}}">很遗憾，您已选择了不参加本次家长会</view>
+      <view wx:else>
+        <view wx:if="{{currentTime}}">班主任{{teacher_name}} - 时间{{currentTime}}</view>
+        <view wx:else>还没有预约</view>
+        <view wx:for="{{selectedTeacherList}}">{{item.teacher_name+'('+item.subject+')'}}已预约</view>
+      </view>
+    </view>
+    <view class="planButton" bindtap="gotoMeeting">{{currentTime?'去修改':'去预约'}}</view>
+  </view>
+  <view class="board">
+    <view>教室安排汇总图(点击预览大图，左滑预览更多)</view>
+    <image class="previewImage" mode="top" src="cloud://hmzx-9gyzn96haa235cf8.686d-hmzx-9gyzn96haa235cf8-1323320011/1.png"  bindtap="previewImages"></image>
+  </view>
+</view>
